@@ -13,6 +13,7 @@
           <a class="navbar-brand" href="/">Blango Home</a>
           <div class="d-flex">
             {% if request.user.is_active %}
+              <a class="nav-link disabled">Hi, {{request.user}}!</a>
               <a class="nav-link" href="{% url "profile" %}">Profile</a>
               <a class="nav-link" href="{% url "logout" %}">Log Out</a>
             {% else %}
